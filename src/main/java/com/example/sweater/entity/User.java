@@ -19,9 +19,6 @@ public class User implements UserDetails {
     private String username;
     @NotBlank(message = "Password cannot be empty")
     private String password;
-    @Transient
-    @NotBlank(message = "Password confirmation cannot be empty")
-    private String passwordRepeat;
     private boolean active;
 
     @Email(message = "Email is not correct")
@@ -119,11 +116,5 @@ public class User implements UserDetails {
         this.activationCode = activationCode;
     }
 
-    public String getPasswordRepeat() {
-        return passwordRepeat;
-    }
 
-    public void setPasswordRepeat(String passwordRepeat) {
-        this.passwordRepeat = passwordRepeat;
-    }
 }
